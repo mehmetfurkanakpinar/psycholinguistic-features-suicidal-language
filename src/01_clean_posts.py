@@ -5,7 +5,7 @@
 import pandas as pd
 from pathlib import Path
 
-RAW_PATH = Path(__file__).resolve().parents[1] / 'data' / 'raw' / 'suicide_detection.csv'
+RAW_PATH = Path(__file__).resolve().parents[1] / 'data' / 'raw' / 'Suicide_Detection.csv'
 OUT_PATH = Path(__file__).resolve().parents[1] / 'data' / 'processed' / 'posts_clean.csv'
 
 def main():
@@ -65,15 +65,15 @@ def main():
 
     #Print updated shape and class distribution
 
-    print('/n Cleaned Dataset Info')
+    print('\n Cleaned Dataset Info')
     print(f'Shape: {df.shape}')
-    print('/n Class Distribution')
+    print('\n Class Distribution')
     print(df['class'].value_counts())
 
     #Save it to processed folder
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    print(f'/n Saving cleaned data to {OUT_PATH}')
+    print(f'\n Saving cleaned data to {OUT_PATH}')
     df.to_csv(OUT_PATH, index=False)
     print('\nDONE')
 
